@@ -1,5 +1,5 @@
 {% extends 'layouts/base_sections.html' %}
-{% load static %}
+
 
 {% block title %} Material Kit 2 by Creative Tim {% endblock title %}
 
@@ -8,7 +8,7 @@
 {% block content %}
 
 <header class="header-2">
-  <div class="page-header min-vh-75 relative" style="background-image: url('{% static 'img/curved-images/curved.jpg' %}')">
+  <div class="page-header min-vh-75 relative" style="background-image: url('{{ url_for('static', filename = 'assets/img/curved-images/curved.jpg' )}}')">
     <div class="container">
       <div class="row">
         <div class="col-lg-7 text-center mx-auto">
@@ -194,7 +194,7 @@
                   </svg>
               </div>
               <h2 class="text-white up mb-0">Feel the <br/> Soft UI Design System</h2>
-              <a href="{% url 'buttons' %}" target="_blank" class="btn btn-outline-white mt-5 up btn-round">Start with Elements</a>
+              <a href="#" target="_blank" class="btn btn-outline-white mt-5 up btn-round">Start with Elements</a>
             </div>
           </div>
       </div>
@@ -591,8 +591,8 @@
         <iframe class="w-100 height-100" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
           <!-- Nucleo Icons -->
-          <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
-          <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="container-fluid px-0 overflow-hidden">
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-icons.css' )}}" rel="stylesheet" />
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-svg.css' )}}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="container-fluid px-0 overflow-hidden">
   <div class="row text-center py-2 mt-3">
     <div class="col-12 mx-auto">
       <button class="btn bg-gradient-primary btn-icon btn-sm" type="button">
@@ -990,23 +990,23 @@
     <div class="col-12">
       <div class="avatar-group">
         <a href="javascript:;" class="avatar avatar-lg rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-          <img alt="Image placeholder" src="{% static 'img/team-1.jpg' %}">
+          <img alt="Image placeholder" src="{{ url_for('static', filename = 'assets/img/team-1.jpg' )}}">
         </a>
         <a href="javascript:;" class="avatar avatar-lg rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-          <img alt="Image placeholder" src="{% static 'img/team-2.jpg' %}">
+          <img alt="Image placeholder" src="{{ url_for('static', filename = 'assets/img/team-2.jpg' )}}">
         </a>
         <a href="javascript:;" class="avatar avatar-lg rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alexander Smith">
-          <img alt="Image placeholder" src="{% static 'img/team-3.jpg' %}">
+          <img alt="Image placeholder" src="{{ url_for('static', filename = 'assets/img/team-3.jpg' )}}">
         </a>
         <a href="javascript:;" class="avatar avatar-lg rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-          <img alt="Image placeholder" src="{% static 'img/team-4.jpg' %}">
+          <img alt="Image placeholder" src="{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}">
         </a>
       </div>
     </div>
   </div>
 </div>
-          <script src="{% static 'js/core/popper.min.js' %}" type="text/javascript"></script>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/popper.min.js' )}}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           <script src="?v=1.0.9" type="text/javascript"></script>
           '></iframe>
       </div>
@@ -1018,16 +1018,16 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar-group"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"avatar avatar-lg rounded-circle"</span> <span class="na">data-bs-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-bs-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Ryan Tompson"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{% static 'img/team-1.jpg' %}"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/team-1.jpg' )}}"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"avatar avatar-lg rounded-circle"</span> <span class="na">data-bs-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-bs-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Romina Hadid"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{% static 'img/team-2.jpg' %}"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/team-2.jpg' )}}"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"avatar avatar-lg rounded-circle"</span> <span class="na">data-bs-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-bs-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Alexander Smith"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{% static 'img/team-3.jpg' %}"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/team-3.jpg' )}}"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"avatar avatar-lg rounded-circle"</span> <span class="na">data-bs-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-bs-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Jessica Doe"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{% static 'img/team-4.jpg' %}"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -1073,26 +1073,26 @@
   <div class="row text-center py-3 mt-3">
     <div class="col-12">
       <a href="javascript:;" class="avatar avatar-xs rounded-circle">
-        <img alt="Image placeholder" src="{% static 'img/team-4.jpg' %}">
+        <img alt="Image placeholder" src="{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}">
       </a>
       <a href="javascript:;" class="avatar avatar-sm rounded-circle">
-        <img alt="Image placeholder" src="{% static 'img/team-4.jpg' %}">
+        <img alt="Image placeholder" src="{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}">
       </a>
       <a href="javascript:;" class="avatar rounded-circle">
-        <img alt="Image placeholder" src="{% static 'img/team-4.jpg' %}">
+        <img alt="Image placeholder" src="{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}">
       </a>
       <a href="javascript:;" class="avatar avatar-lg rounded-circle">
-        <img alt="Image placeholder" src="{% static 'img/team-4.jpg' %}">
+        <img alt="Image placeholder" src="{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}">
       </a>
       <a href="javascript:;" class="avatar avatar-xl rounded-circle">
-        <img alt="Image placeholder" src="{% static 'img/team-4.jpg' %}">
+        <img alt="Image placeholder" src="{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}">
       </a>
     </div>
   </div>
 </div>
 
-          <script src="{% static 'js/core/popper.min.js' %}" type="text/javascript"></script>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/popper.min.js' )}}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           <script src="?v=1.0.9" type="text/javascript"></script>
           '></iframe>
       </div>
@@ -1103,19 +1103,19 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row text-center py-3 mt-3"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"avatar avatar-xs rounded-circle"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{% static 'img/team-4.jpg' %}"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"avatar avatar-sm rounded-circle"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{% static 'img/team-4.jpg' %}"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"avatar rounded-circle"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{% static 'img/team-4.jpg' %}"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"avatar avatar-lg rounded-circle"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{% static 'img/team-4.jpg' %}"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:;"</span> <span class="na">class=</span><span class="s">"avatar avatar-xl rounded-circle"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{% static 'img/team-4.jpg' %}"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">"Image placeholder"</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/team-4.jpg' )}}"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -1162,8 +1162,8 @@
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
           <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
           <!-- Nucleo Icons -->
-          <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
-          <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" />
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-icons.css' )}}" rel="stylesheet" />
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-svg.css' )}}" rel="stylesheet" />
           <link id="pagestyle" href="https://demos.creative-tim.com/soft-ui-design-system/assets/css/soft-design-system.min.css?v=1.0.9" rel="stylesheet" />
           <div class="container py-2 mt-2 overflow-hidden">
   <div class="row">
@@ -1803,8 +1803,8 @@
   </div>
 </div>
 
-          <script src="{% static 'js/core/popper.min.js' %}" type="text/javascript"></script>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/popper.min.js' )}}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           <script>
             var tooltipTriggerList = [].slice.call(document.querySelectorAll(&#39;[data-bs-toggle="tooltip"]&#39;))
           var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -1899,8 +1899,8 @@
   </div>
 </div>
 
-          <script src="{% static 'js/core/popper.min.js' %}" type="text/javascript"></script>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/popper.min.js' )}}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           <script>var popoverTriggerList = [].slice.call(document.querySelectorAll(&#39;[data-bs-toggle="popover"]&#39;))
           var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
@@ -2010,7 +2010,7 @@
   </div>
 </div>
 
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           '></iframe>
       </div>
       <div class="tab-pane" id="code-modal">
@@ -2089,8 +2089,8 @@
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
           <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
           <!-- Nucleo Icons -->
-          <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
-          <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><!--  Datepicker -->
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-icons.css' )}}" rel="stylesheet" />
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-svg.css' )}}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><!--  Datepicker -->
 <div class="row py-3">
   <div class="col-md-6 mx-auto">
     <div class="row">
@@ -2104,9 +2104,9 @@
   </div>
 </div>
 
-          <script src="{% static 'js/core/popper.min.js' %}" type="text/javascript"></script>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
-          <script src="{% static 'js/plugins/flatpickr.min.js' %}"></script><script href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/js/soft-design-system.min.js" rel="stylesheet"></script><script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/popper.min.js' )}}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/plugins/flatpickr.min.js' )}}"></script><script href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/js/soft-design-system.min.js" rel="stylesheet"></script><script>
             if (document.querySelector(".datepicker")) {
               flatpickr(".datepicker", {});
             }
@@ -2205,7 +2205,7 @@
         <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-5">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages1" data-bs-toggle="dropdown" aria-expanded="false">
             Pages
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-1">
           </a>
           <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages1">
             <div class="d-none d-lg-block">
@@ -2244,12 +2244,12 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
             Blocks
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-1">
           </a>
           <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
             <div class="d-none d-lg-block">
   <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{% url 'presentation' %}">
+    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
       <div class="d-flex">
         <div class="icon h-10 me-3 d-flex mt-1">
           <i class="ni ni-single-copy-04 text-gradient text-primary"></i>
@@ -2260,7 +2260,7 @@
             <span class="text-sm">See all 109 sections</span>
           </div>
 
-          <img src="{% static 'img/down-arrow.svg' %}" alt="down-arrow" class="arrow"/>
+          <img src="{{ url_for('static', filename = 'assets/img/down-arrow.svg' )}}" alt="down-arrow" class="arrow"/>
         </div>
       </div>
     </a>
@@ -2350,7 +2350,7 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
             Docs
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-1">
           </a>
           <ul class="dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
             <div class="d-none d-lg-block">
@@ -2623,7 +2623,7 @@
 </nav>
 <!-- End Navbar -->
 
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           '></iframe>
       </div>
       <div class="tab-pane" id="code-nav-light">
@@ -2647,7 +2647,7 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2 ms-lg-5"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuPages1"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Pages
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-dark.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuPages1"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
@@ -2686,12 +2686,12 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuBlocks"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Blocks
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-dark.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuBlocks"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover dropdown-subitem"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item py-2 ps-3 border-radius-md"</span> <span class="na">href=</span><span class="s">"{% url 'presentation' %}"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item py-2 ps-3 border-radius-md"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon h-10 me-3 d-flex mt-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ni ni-single-copy-04 text-gradient text-primary"</span><span class="nt">&gt;&lt;/i&gt;</span>
@@ -2702,7 +2702,7 @@
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>See all 109 sections<span class="nt">&lt;/span&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
 
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow"</span><span class="nt">/&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
@@ -2792,7 +2792,7 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuDocs"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Docs
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-dark.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuDocs"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
@@ -3120,7 +3120,7 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages0" data-bs-toggle="dropdown" aria-expanded="false">
             Pages
-            <img src="{% static 'img/down-arrow-white.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}" alt="down-arrow" class="arrow ms-1">
           </a>
           <div class="dropdown-menu dropdown-menu-animation dropdown-xl p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages0">
             <div class="d-none d-lg-block">
@@ -3159,12 +3159,12 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
             Blocks
-            <img src="{% static 'img/down-arrow-white.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}" alt="down-arrow" class="arrow ms-1">
           </a>
           <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
             <div class="d-none d-lg-block">
   <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{% url 'presentation' %}">
+    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
       <div class="d-flex">
         <div class="icon h-10 me-3 d-flex mt-1">
           <i class="ni ni-single-copy-04 text-gradient text-primary"></i>
@@ -3175,7 +3175,7 @@
             <span class="text-sm">See all 109 sections</span>
           </div>
 
-          <img src="{% static 'img/down-arrow.svg' %}" alt="down-arrow" class="arrow"/>
+          <img src="{{ url_for('static', filename = 'assets/img/down-arrow.svg' )}}" alt="down-arrow" class="arrow"/>
         </div>
       </div>
     </a>
@@ -3265,7 +3265,7 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
             Docs
-            <img src="{% static 'img/down-arrow-white.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}" alt="down-arrow" class="arrow ms-1">
           </a>
           <ul class="dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
             <div class="d-none d-lg-block">
@@ -3538,7 +3538,7 @@
 </nav>
 <!-- End Navbar -->
 
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           '></iframe>
       </div>
       <div class="tab-pane" id="code-nav-dark">
@@ -3562,7 +3562,7 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuPages0"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Pages
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-white.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-xl p-3 border-radius-xl mt-0 mt-lg-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuPages0"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
@@ -3601,12 +3601,12 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuBlocks"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Blocks
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-white.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuBlocks"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover dropdown-subitem"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item py-2 ps-3 border-radius-md"</span> <span class="na">href=</span><span class="s">"{% url 'presentation' %}"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item py-2 ps-3 border-radius-md"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon h-10 me-3 d-flex mt-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ni ni-single-copy-04 text-gradient text-primary"</span><span class="nt">&gt;&lt;/i&gt;</span>
@@ -3617,7 +3617,7 @@
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>See all 109 sections<span class="nt">&lt;/span&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
 
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow"</span><span class="nt">/&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
@@ -3707,7 +3707,7 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuDocs"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Docs
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-white.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuDocs"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
@@ -4037,7 +4037,7 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
             Pages
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-1">
           </a>
           <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
             <div class="d-none d-lg-block">
@@ -4076,12 +4076,12 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
             Blocks
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-1">
           </a>
           <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
             <div class="d-none d-lg-block">
   <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{% url 'presentation' %}">
+    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
       <div class="d-flex">
         <div class="icon h-10 me-3 d-flex mt-1">
           <i class="ni ni-single-copy-04 text-gradient text-primary"></i>
@@ -4092,7 +4092,7 @@
             <span class="text-sm">See all 109 sections</span>
           </div>
 
-          <img src="{% static 'img/down-arrow.svg' %}" alt="down-arrow" class="arrow"/>
+          <img src="{{ url_for('static', filename = 'assets/img/down-arrow.svg' )}}" alt="down-arrow" class="arrow"/>
         </div>
       </div>
     </a>
@@ -4182,7 +4182,7 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
             Docs
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-1">
           </a>
           <ul class="dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
             <div class="d-none d-lg-block">
@@ -4457,7 +4457,7 @@
 </div></div></div>
 
           </div>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           '></iframe>
       </div>
       <div class="tab-pane" id="code-nav-blur">
@@ -4482,7 +4482,7 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuPages"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Pages
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-dark.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuPages"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
@@ -4521,12 +4521,12 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuBlocks"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Blocks
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-dark.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuBlocks"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover dropdown-subitem"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item py-2 ps-3 border-radius-md"</span> <span class="na">href=</span><span class="s">"{% url 'presentation' %}"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item py-2 ps-3 border-radius-md"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon h-10 me-3 d-flex mt-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ni ni-single-copy-04 text-gradient text-primary"</span><span class="nt">&gt;&lt;/i&gt;</span>
@@ -4537,7 +4537,7 @@
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>See all 109 sections<span class="nt">&lt;/span&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
 
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow"</span><span class="nt">/&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
@@ -4627,7 +4627,7 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuDocs"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Docs
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-dark.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuDocs"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
@@ -4938,7 +4938,7 @@
       <div class="tab-pane active" id="preview-nav-transparent">
         <iframe class="w-100 height-300" srcdoc='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-          <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="w-100" style="height: 100vh !important; background-image:url({% static 'img/curved-images/curved5-small.jpg' %});background-size:cover;">
+          <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="w-100" style="height: 100vh !important; background-image:url({{ url_for('static', filename = 'assets/img/curved-images/curved5-small.jpg' )}});background-size:cover;">
             <span class="mask bg-gradient-dark"></span>
             <!-- Navbar Transparent -->
 <nav
@@ -4959,8 +4959,8 @@
         <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-6">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages2" data-bs-toggle="dropdown" aria-expanded="false">
             Pages
-            <img src="{% static 'img/down-arrow-white.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}" alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
           </a>
           <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages2">
             <div class="d-none d-lg-block">
@@ -4999,13 +4999,13 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
             Blocks
-            <img src="{% static 'img/down-arrow-white.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}" alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
           </a>
           <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
             <div class="d-none d-lg-block">
   <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{% url 'presentation' %}">
+    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
       <div class="d-flex">
         <div class="icon h-10 me-3 d-flex mt-1">
           <i class="ni ni-single-copy-04 text-gradient text-primary"></i>
@@ -5016,7 +5016,7 @@
             <span class="text-sm">See all 109 sections</span>
           </div>
 
-          <img src="{% static 'img/down-arrow.svg' %}" alt="down-arrow" class="arrow"/>
+          <img src="{{ url_for('static', filename = 'assets/img/down-arrow.svg' )}}" alt="down-arrow" class="arrow"/>
         </div>
       </div>
     </a>
@@ -5106,8 +5106,8 @@
         <li class="nav-item dropdown dropdown-hover mx-2">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
             Docs
-            <img src="{% static 'img/down-arrow-white.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}" alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
+            <img src="{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
           </a>
           <ul class="dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
             <div class="d-none d-lg-block">
@@ -5381,7 +5381,7 @@
 <!-- End Navbar -->
 
           </div>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           '></iframe>
       </div>
       <div class="tab-pane" id="code-nav-transparent">
@@ -5406,8 +5406,8 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2 ms-lg-6"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuPages2"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Pages
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-white.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-block d-none"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-dark.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-none d-block"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-block d-none"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-none d-block"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuPages2"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
@@ -5446,13 +5446,13 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuBlocks"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Blocks
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-white.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-block d-none"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-dark.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-none d-block"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-block d-none"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-none d-block"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuBlocks"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover dropdown-subitem"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item py-2 ps-3 border-radius-md"</span> <span class="na">href=</span><span class="s">"{% url 'presentation' %}"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item py-2 ps-3 border-radius-md"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon h-10 me-3 d-flex mt-1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"ni ni-single-copy-04 text-gradient text-primary"</span><span class="nt">&gt;&lt;/i&gt;</span>
@@ -5463,7 +5463,7 @@
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-sm"</span><span class="nt">&gt;</span>See all 109 sections<span class="nt">&lt;/span&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
 
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow"</span><span class="nt">/&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
@@ -5553,8 +5553,8 @@
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item dropdown dropdown-hover mx-2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"</span> <span class="na">id=</span><span class="s">"dropdownMenuDocs"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
             Docs
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-white.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-block d-none"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{% static 'img/down-arrow-dark.svg' %}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-none d-block"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-white.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-block d-none"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ url_for('static', filename = 'assets/img/down-arrow-dark.svg' )}}"</span> <span class="na">alt=</span><span class="s">"down-arrow"</span> <span class="na">class=</span><span class="s">"arrow ms-1 d-lg-none d-block"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuDocs"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>
@@ -5884,8 +5884,8 @@
   </div>
 </div>
 
-          <script src="{% static 'js/core/popper.min.js' %}" type="text/javascript"></script>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/popper.min.js' )}}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           <script src="https://unpkg.com/soft-ui-design-system@1.0.4/assets/js/soft-design-system.min.js" type="text/javascript"></script>
           '></iframe>
       </div>
@@ -5982,8 +5982,8 @@
   </div>
 </div>
 
-          <script src="{% static 'js/core/popper.min.js' %}" type="text/javascript"></script>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>'></iframe>
+          <script src="{{ url_for('static', filename = 'assets/js/core/popper.min.js' )}}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>'></iframe>
       </div>
       <div class="tab-pane" id="code-pagination-simple">
         <div class="position-relative p-4 pb-2">
@@ -6123,8 +6123,8 @@
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
           <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
           <!-- Nucleo Icons -->
-          <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
-          <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="row text-center py-2 mt-3">
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-icons.css' )}}" rel="stylesheet" />
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-svg.css' )}}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="row text-center py-2 mt-3">
   <div class="col-4 mx-auto">
     <div class="input-group mb-4">
       <span class="input-group-text"><i class="fas fa-search" aria-hidden="true"></i></span>
@@ -6296,8 +6296,8 @@
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
           <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
           <!-- Nucleo Icons -->
-          <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
-          <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" />
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-icons.css' )}}" rel="stylesheet" />
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-svg.css' )}}" rel="stylesheet" />
           <link id="pagestyle" href="https://demos.creative-tim.com/soft-ui-design-system/assets/css/soft-design-system.min.css?v=1.0.9" rel="stylesheet" />
           <section>
   <div class="container py-4">
@@ -6348,8 +6348,8 @@
   </div>
 </section>
 
-          <script src="{% static 'js/core/popper.min.js' %}" type="text/javascript"></script>
-          <script src="{% static 'js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/popper.min.js' )}}" type="text/javascript"></script>
+          <script src="{{ url_for('static', filename = 'assets/js/core/bootstrap.min.js' )}}" type="text/javascript"></script>
           <script src="?v=1.0.9" type="text/javascript"></script>
           '></iframe>
       </div>
@@ -6457,12 +6457,12 @@
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
           <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
           <!-- Nucleo Icons -->
-          <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
-          <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><!-- -------- START HEADER 1 w/ text and image on right ------- -->
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-icons.css' )}}" rel="stylesheet" />
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-svg.css' )}}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><!-- -------- START HEADER 1 w/ text and image on right ------- -->
 <header>
   <div class="page-header min-vh-100">
     <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
-      <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url({% static 'img/curved-images/curved11.jpg' %})"></div>
+      <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url({{ url_for('static', filename = 'assets/img/curved-images/curved11.jpg' )}})"></div>
     </div>
     <div class="container-fluid">
       <div class="row">
@@ -6490,7 +6490,7 @@
 <span class="nt">&lt;header&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header min-vh-100"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"oblique position-absolute top-0 h-100 d-md-block d-none"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"</span> <span class="na">style=</span><span class="s">"background-image:url({% static 'img/curved-images/curved11.jpg' %})"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"</span> <span class="na">style=</span><span class="s">"background-image:url({{ url_for('static', filename = 'assets/img/curved-images/curved11.jpg' )}})"</span><span class="nt">&gt;&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
@@ -6550,15 +6550,15 @@
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
           <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
           <!-- Nucleo Icons -->
-          <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
-          <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><!-- -------- START Features w/ icons and text on left & gradient title and text on right -------- -->
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-icons.css' )}}" rel="stylesheet" />
+          <link href="{{ url_for('static', filename = 'assets/css/nucleo-svg.css' )}}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><!-- -------- START Features w/ icons and text on left & gradient title and text on right -------- -->
 <div class="container">
   <div class="row py-4">
     <div class="col-lg-6">
       <h3 class="text-gradient text-primary mb-0 mt-2">Read More About Us</h3>
       <h3>The most important</h3>
       <p>Pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand.</p>
-      <a href="javascript:;" class="text-primary icon-move-right">More about us
+      <a href="{{url_for('pages_about_us')}}" class="text-primary icon-move-right">More about us
         <i class="fas fa-arrow-right text-sm ms-1"></i>
       </a>
     </div>
@@ -6673,7 +6673,7 @@
       <div class="col-md-8">
         <div class="row mt-4">
           <div class="col-md-6">
-            <a href="{% url 'about-us' %}">
+            <a href="{{url_for('pages_about_us')}}">
               <div class="card move-on-hover">
                 <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/section-pages/about-us.jpg" alt="">
               </div>
@@ -6683,7 +6683,7 @@
             </a>
           </div>
           <div class="col-md-6 mt-md-0 mt-5">
-            <a href="{% url 'contact-us' %}">
+            <a href="{{url_for('pages_contact_us')}}">
               <div class="card move-on-hover">
                 <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/section-pages/contact-us.jpg" alt="">
               </div>
@@ -6693,7 +6693,7 @@
             </a>
           </div>
           <div class="col-md-6 mt-md-0 mt-6">
-            <a href="{% url 'login' %}">
+            <a href="{{url_for('accounts_sign_in')}}">
               <div class="card move-on-hover">
                 <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/section-account/sign-in.jpg" alt="">
               </div>
@@ -6703,7 +6703,7 @@
             </a>
           </div>
           <div class="col-md-6 mt-md-0 mt-6">
-            <a href="{% url 'author' %}">
+            <a href="{{url_for('pages_author')}}">
               <div class="card move-on-hover">
                 <img class="w-100" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/section-pages/author.jpg" alt="">
               </div>
@@ -6923,19 +6923,19 @@
     <hr class="horizontal dark my-5">
     <div class="row">
       <div class="col-lg-2 col-md-4 col-6 ms-auto">
-        <img class="w-100 opacity-6" src="{% static 'img/logos/gray-logos/logo-apple.svg' %}" alt="Logo">
+        <img class="w-100 opacity-6" src="{{ url_for('static', filename = 'assets/img/logos/gray-logos/logo-apple.svg' )}}" alt="Logo">
       </div>
       <div class="col-lg-2 col-md-4 col-6">
-        <img class="w-100 opacity-6" src="{% static 'img/logos/gray-logos/logo-facebook.svg' %}" alt="Logo">
+        <img class="w-100 opacity-6" src="{{ url_for('static', filename = 'assets/img/logos/gray-logos/logo-facebook.svg' )}}" alt="Logo">
       </div>
       <div class="col-lg-2 col-md-4 col-6">
-        <img class="w-100 opacity-6" src="{% static 'img/logos/gray-logos/logo-nasa.svg' %}" alt="Logo">
+        <img class="w-100 opacity-6" src="{{ url_for('static', filename = 'assets/img/logos/gray-logos/logo-nasa.svg' )}}" alt="Logo">
       </div>
       <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
-        <img class="w-100 opacity-6" src="{% static 'img/logos/gray-logos/logo-vodafone.svg' %}" alt="Logo">
+        <img class="w-100 opacity-6" src="{{ url_for('static', filename = 'assets/img/logos/gray-logos/logo-vodafone.svg' )}}" alt="Logo">
       </div>
       <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
-        <img class="w-100 opacity-6" src="{% static 'img/logos/gray-logos/logo-digitalocean.svg' %}" alt="Logo">
+        <img class="w-100 opacity-6" src="{{ url_for('static', filename = 'assets/img/logos/gray-logos/logo-digitalocean.svg' )}}" alt="Logo">
       </div>
     </div>
   </div>
@@ -6944,7 +6944,7 @@
 
 <section class="py-sm-7" id="download-soft-ui">
   <div class="bg-gradient-dark position-relative m-3 border-radius-xl overflow-hidden">
-    <img src="{% static 'img/shapes/waves-white.svg' %}" alt="pattern-lines" class="position-absolute start-0 top-md-0 w-100 opacity-6">
+    <img src="{{ url_for('static', filename = 'assets/img/shapes/waves-white.svg' )}}" alt="pattern-lines" class="position-absolute start-0 top-md-0 w-100 opacity-6">
     <div class="container py-7 postion-relative z-index-2 position-relative">
       <div class="row">
         <div class="col-md-7 mx-auto text-center">
@@ -7035,7 +7035,7 @@
       <div class="col-lg-5 col-md-8 order-2 order-md-2 order-lg-1">
         <div class="position-relative ms-lg-5 mb-0 mb-md-7 mb-lg-0 d-none d-md-block d-lg-block d-xl-block h-75">
           <div class="bg-gradient-primary w-100 h-100 border-radius-xl position-absolute d-lg-block d-none"></div>
-          <img src="{% static 'img/curved-images/curved11.jpg' %}" class="w-100 border-radius-xl mt-6 ms-lg-5 position-relative z-index-5" alt="">
+          <img src="{{ url_for('static', filename = 'assets/img/curved-images/curved11.jpg' )}}" class="w-100 border-radius-xl mt-6 ms-lg-5 position-relative z-index-5" alt="">
         </div>
       </div>
       <div class="col-lg-5 col-md-12 ms-auto order-1 order-md-1 order-lg-1">

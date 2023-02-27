@@ -1,5 +1,5 @@
 {% extends 'layouts/base_sections.html' %}
-{% load static %}
+
 
 {% block title %} Soft UI Design System by Creative Tim {% endblock title %}
 
@@ -55,12 +55,12 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
         <!-- Nucleo Icons -->
-        <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
-        <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><!-- -------- START HEADER 1 w/ text and image on right ------- -->
+        <link href="{{ url_for('static', filename = 'assets/css/nucleo-icons.css' )}}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename = 'assets/css/nucleo-svg.css' )}}" rel="stylesheet" /><link href="https://unpkg.com/soft-ui-design-system@1.0.4/assets/css/soft-design-system.min.css" rel="stylesheet" /><!-- -------- START HEADER 1 w/ text and image on right ------- -->
 <header>
   <div class="page-header min-vh-100">
     <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
-      <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url({% static 'img/curved-images/curved11.jpg' %})"></div>
+      <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url({{ url_for('static', filename = 'assets/img/curved-images/curved11.jpg' )}})"></div>
     </div>
     <div class="container">
       <div class="row">
@@ -88,7 +88,7 @@
 <span class="nt">&lt;header&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header min-vh-100"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"oblique position-absolute top-0 h-100 d-md-block d-none"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"</span> <span class="na">style=</span><span class="s">"background-image:url({% static 'img/curved-images/curved11.jpg' %})"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"</span> <span class="na">style=</span><span class="s">"background-image:url({{ url_for('static', filename = 'assets/img/curved-images/curved11.jpg' )}})"</span><span class="nt">&gt;&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>

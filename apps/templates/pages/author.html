@@ -1,6 +1,6 @@
 
 {% extends 'layouts/base_sections.html' %}
-{% load static %}
+
 
 {% block title %} Material Kit 2 by Creative Tim {% endblock title %}
 
@@ -21,7 +21,7 @@
         <div class="col-12 mx-auto">
           <div class="row py-lg-7 py-5">
             <div class="col-lg-3 col-md-5 position-relative my-auto">
-              <img class="img border-radius-lg max-width-200 w-100 position-relative z-index-2" src="{% static 'img/bruce-mars.jpg' %}" alt="bruce">
+              <img class="img border-radius-lg max-width-200 w-100 position-relative z-index-2" src="{{ url_for('static', filename = 'assets/img/bruce-mars.jpg' )}}" alt="bruce">
             </div>
             <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mt-sm-0 mt-4">
               <div class="d-flex justify-content-between align-items-center mb-2">
@@ -189,9 +189,9 @@
                   </div>
                 </form>
               </div>
-              <div class="col-lg-5 position-relative bg-cover px-0" style="background-image: url('{% static 'img/curved-images/curved5.jpg' %}')">
+              <div class="col-lg-5 position-relative bg-cover px-0" style="background-image: url('{{ url_for('static', filename = 'assets/img/curved-images/curved5.jpg' )}}')">
                 <div class="position-absolute z-index-2 w-100 h-100 top-0 start-0 d-lg-block d-none">
-                  <img src="{% static 'img/wave-1.svg' %}" class="h-100 ms-n2" alt="vertical-wave">
+                  <img src="{{ url_for('static', filename = 'assets/img/wave-1.svg' )}}" class="h-100 ms-n2" alt="vertical-wave">
                 </div>
                 <div class="z-index-2 text-center d-flex h-100 w-100 d-flex m-auto justify-content-center">
                   <div class="mask bg-gradient-info opacity-9"></div>
